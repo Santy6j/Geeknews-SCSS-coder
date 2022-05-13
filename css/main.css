@@ -1,0 +1,375 @@
+/*efecto grow */
+.crecer {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform; }
+  .crecer:hover {
+    -webkit-transform: scale(1.15);
+    transform: scale(1.15); }
+  .crecer:focus {
+    -webkit-transform: scale(1.15);
+    transform: scale(1.15); }
+  .crecer:active {
+    -webkit-transform: scale(1.15);
+    transform: scale(1.15); }
+
+/*reflection*/
+.imgAnim {
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: all 200ms ease-in;
+  filter: grayscale(1) opacity(0.8); }
+  .imgAnim:hover {
+    filter: grayscale(0) opacity(1); }
+    .imgAnim:hover::after {
+      content: '';
+      background-image: inherit;
+      background-repeat: no-repeat;
+      background-position: bottom;
+      background-size: cover;
+      width: inherit;
+      height: 40%;
+      position: absolute;
+      bottom: -25%; }
+    .imgAnim:hover::before {
+      content: '';
+      width: inherit;
+      height: 42%;
+      position: absolute;
+      bottom: -25%;
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.5));
+      z-index: 1; }
+  .imgAnim::before {
+    transform: scaleY(-1); }
+  .imgAnim::after {
+    transform: scaleY(-1); }
+
+/* media queries */
+@media screen and (min-width: 575px) {
+  .noticias {
+    display: grid;
+    grid-auto-flow: 1fr;
+    height: 200vh; }
+  .img {
+    display: block;
+    width: 100%;
+    margin: auto;
+    align-self: center; }
+  .textNoti {
+    color: antiquewhite;
+    font-family: "Anybody", cursive;
+    word-break: break-all;
+    text-align: center;
+    margin-right: 8px;
+    margin-left: 8px; }
+  .video {
+    height: 40vw;
+    width: 50vw;
+    margin: auto;
+    align-items: center; } }
+
+@media screen and (min-width: 1024px) {
+  .noticias {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    height: 115vh; }
+  /* Ubicacion de las noticias en el grid */
+  .item1 {
+    grid-column: 1;
+    grid-row: 1; }
+  .item2 {
+    grid-column: 1;
+    grid-row: 2; }
+  .item3 {
+    grid-column: 1;
+    grid-row: 3; }
+  .item4 {
+    grid-column: 2;
+    grid-row: 2;
+    justify-content: center;
+    align-items: center; }
+  .item5 {
+    grid-column: 2;
+    grid-row: 3;
+    justify-content: center;
+    align-items: center; }
+  .item6 {
+    grid-column: 3;
+    grid-row: 2; }
+  .item7 {
+    grid-column: 3;
+    grid-row: 3; }
+  .img {
+    display: block;
+    height: 15vw;
+    width: 20vw;
+    margin-left: auto;
+    margin-right: auto; }
+  .title {
+    color: rgba(140, 228, 240, 0.863);
+    font-family: "Anybody", cursive;
+    font-size: 4vh;
+    text-justify: center;
+    align-self: center;
+    grid-column: 2; }
+  .text {
+    color: antiquewhite;
+    font-family: "Anybody", cursive;
+    font-size: 2vw;
+    word-break: break-all;
+    margin-right: 1.5vw;
+    text-align: center; }
+  .textNoti {
+    color: antiquewhite;
+    font-family: "Anybody", cursive;
+    font-size: 1.25vw;
+    word-break: break-all;
+    text-align: center;
+    margin-right: 40px;
+    margin-left: 40px; }
+  .textLink {
+    color: red;
+    font-family: "Anybody", cursive;
+    font-size: 18px; }
+  /*aca comienza lo relativo al footer*/
+  .piePag {
+    display: grid;
+    grid-template-columns: 2fr 4fr 2fr;
+    height: 18vw; }
+  .sugest {
+    color: antiquewhite;
+    font-family: "Anybody", cursive;
+    font-size: 14px;
+    grid-column: 1;
+    border: 1px;
+    margin-top: 6vw; }
+  .about {
+    color: antiquewhite;
+    font-family: "Anybody", cursive;
+    grid-column: 2;
+    font-size: 2vw;
+    border: 1px;
+    bottom: 1px;
+    justify-self: center;
+    align-self: center; }
+  .staff {
+    text-align: center;
+    align-self: center;
+    padding: 1px; }
+  .noti {
+    display: grid;
+    grid-auto-flow: 2fr;
+    height: 60vh; }
+  .video {
+    height: 40vh;
+    width: 30vw;
+    margin: auto;
+    align-self: center;
+    grid-column: 2; }
+  form {
+    border: 3px solid #f1f1f1;
+    color: antiquewhite;
+    grid-column: 2; } }
+
+.bGround {
+  background-image: url(../img/background.jpg);
+  background-color: #9b9595;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+a {
+  color: inherit; }
+
+.encabezado {
+  display: flex; }
+
+.container {
+  font-family: "Anybody", cursive;
+  color: antiquewhite !important; }
+
+.logo {
+  max-width: 100%;
+  max-height: 100%; }
+
+.logoForo {
+  display: inline-block;
+  grid-column: 1;
+  text-align: center;
+  width: 100%; }
+
+.menu {
+  color: antiquewhite;
+  font-family: "Anybody", cursive;
+  font-size: 2.5vw;
+  border-width: 5px;
+  margin: 10px;
+  grid-column: 2;
+  display: flex;
+  text-align: center; }
+
+.menuLista {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 1.5vw; }
+
+.menuSocials {
+  color: antiquewhite;
+  font-size: 3vw;
+  text-align: center;
+  grid-column: 3;
+  display: inline-block;
+  border: 5px;
+  border-color: bisque; }
+
+.noticias {
+  display: grid;
+  grid-auto-flow: 1fr;
+  height: 80vh; }
+
+/* Ubicacion de las noticias en el grid */
+.item1 {
+  grid-column: 1; }
+
+.item2 {
+  grid-column: 1; }
+
+.item3 {
+  grid-column: 1; }
+
+.item4 {
+  grid-column: 1;
+  justify-content: center;
+  align-items: center; }
+
+.item5 {
+  grid-column: 1;
+  justify-content: center;
+  align-items: center; }
+
+.item6 {
+  grid-column: 1; }
+
+.item7 {
+  grid-column: 1; }
+
+.img {
+  display: grid;
+  border: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  align-self: center; }
+
+.title {
+  color: rgba(140, 228, 240, 0.863);
+  font-family: "Anybody", cursive;
+  font-size: 2rem;
+  text-justify: auto;
+  text-align: center; }
+
+.text {
+  color: #fffdfa;
+  font-family: "Anybody", cursive;
+  word-break: break-all;
+  text-align: center; }
+
+/* grid tambien usado en otras paginas */
+.textNoti {
+  color: antiquewhite;
+  font-family: "Anybody", cursive;
+  font-size: 2em;
+  text-align: center; }
+
+.textLink {
+  color: red;
+  font-family: "Anybody", cursive;
+  font-size: 2vw; }
+
+/*aca comienza lo relativo al footer*/
+.piePag {
+  display: grid;
+  grid-template-rows: 2fr;
+  height: 4vw; }
+
+.sugest {
+  color: antiquewhite;
+  font-family: "Anybody", cursive;
+  font-size: 14px;
+  border: 1px;
+  margin-top: 6vw; }
+
+.about {
+  color: antiquewhite;
+  font-family: "Anybody", cursive;
+  font-size: 1.5vw;
+  border: 1px;
+  bottom: 1px;
+  justify-self: center;
+  align-self: end; }
+
+.staff {
+  text-align: center;
+  align-self: center;
+  padding: 1px; }
+
+.video {
+  display: inline-block;
+  align-items: center;
+  align-self: center; }
+
+/*pantalla de login*/
+form {
+  border: 3px solid #f1f1f1;
+  color: antiquewhite; }
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  color: antiquewhite; }
+
+input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  color: antiquewhite; }
+
+/* estilo de los botones */
+buttonForm {
+  background-color: #0430aa80;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%; }
+  buttonForm:hover {
+    opacity: 0.8; }
+
+/* boton cancelar */
+.cancelbtnForm {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336; }
+
+.containerForm {
+  padding: 16px; }
+
+/* olvidaste password*/
+span.psw {
+  float: right;
+  padding-top: 16px; }

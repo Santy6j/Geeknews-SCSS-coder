@@ -1,0 +1,162 @@
+$color_1: inherit;
+$color_2: antiquewhite;
+$color_3: rgba(140, 228, 240, 0.863);
+$color_4: rgb(255, 253, 250);
+$color_5: red;
+$color_6: white;
+$font-family_1: 'Anybody', cursive;
+$background-color_1: rgb(155, 149, 149);
+$background-color_2: #0430aa80;
+$background-color_3: #f44336;
+$border-color_1: bisque;
+/* media queries */
+@media screen and (min-width : 575px) {
+	.noticias {
+		display: grid;
+		grid-auto-flow: 1fr;
+		height: 200vh;
+	}
+	.img {
+		display: block;
+		width: 100%;
+		margin: auto;
+		align-self: center;
+	}
+	.textNoti {
+		color: $color_2;
+		font-family: $font-family_1;
+		word-break: break-all;
+		text-align: center;
+		margin-right: 8px;
+		margin-left: 8px;
+	}
+	.video {
+		height: 40vw;
+		width: 50vw;
+		margin: auto;
+		align-items: center;
+	}
+}
+@media screen and (min-width : 1024px) {
+	.noticias {
+		display: grid;
+		grid-template-columns: 2fr 2fr 2fr;
+		height: 115vh;
+	}
+    /* Ubicacion de las noticias en el grid */
+	.item1 {
+		grid-column: 1;
+		grid-row: 1;
+	}
+	.item2 {
+		grid-column: 1;
+		grid-row: 2;
+	}
+	.item3 {
+		grid-column: 1;
+		grid-row: 3;
+	}
+	.item4 {
+		grid-column: 2;
+		grid-row: 2;
+		justify-content: center;
+		align-items: center;
+	}
+	.item5 {
+		grid-column: 2;
+		grid-row: 3;
+		justify-content: center;
+		align-items: center;
+	}
+	.item6 {
+		grid-column: 3;
+		grid-row: 2;
+	}
+	.item7 {
+		grid-column: 3;
+		grid-row: 3;
+	}
+	.img {
+		display: block;
+		height: 15vw;
+		width: 20vw;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.title {
+		color: $color_3;
+		font-family: $font-family_1;
+		font-size: 4vh;
+		text-justify: center;
+		align-self: center;
+		grid-column: 2;
+	}
+	.text {
+		color: $color_2;
+		font-family: $font-family_1;
+		font-size: 2vw;
+		word-break: break-all;
+		margin-right: 1.5vw;
+		text-align: center;
+	}
+	.textNoti {
+		color: $color_2;
+		font-family: $font-family_1;
+		font-size: 1.25vw;
+		word-break: break-all;
+		text-align: center;
+		margin-right: 40px;
+		margin-left: 40px;
+	}
+	.textLink {
+		color: $color_5;
+		font-family: $font-family_1;
+		font-size: 18px;
+	}
+    /*aca comienza lo relativo al footer*/
+	.piePag {
+		display: grid;
+		grid-template-columns: 2fr 4fr 2fr;
+		height: 18vw;
+	}
+	.sugest {
+		color: $color_2;
+		font-family: $font-family_1;
+		font-size: 14px;
+		grid-column: 1;
+		border: 1px;
+		margin-top: 6vw;
+	}
+	.about {
+		color: $color_2;
+		font-family: $font-family_1;
+		grid-column: 2;
+		font-size: 2vw;
+		border: 1px;
+		bottom: 1px;
+		justify-self: center;
+		align-self: center;
+	}
+	.staff {
+		text-align: center;
+		align-self: center;
+		padding: 1px;
+	}
+	.noti {
+		display: grid;
+		grid-auto-flow: 2fr;
+		height: 60vh;
+	}
+	.video {
+		height: 40vh;
+		width: 30vw;
+		margin: auto;
+		align-self: center;
+		grid-column: 2;
+	}
+	form {
+		border: 3px solid #f1f1f1;
+		color: $color_2;
+		grid-column: 2;
+	}
+}
