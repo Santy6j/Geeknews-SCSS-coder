@@ -12,11 +12,38 @@ $background-color_2: #0430aa80;
 $background-color_3: #f44336;
 $border-color_1: bisque;
 
+
+$titulocolor: (
+	tituloMain: rgb(0, 151, 252),
+	tituloNoti:	rgb(1, 189, 48),
+	tituloAbout: rgb(240, 247, 144),
+);
+
+@each	$titulocolor, $color in $titulocolor{
+	.titulocolor-#{$titulocolor} {
+		color: $color;
+	}
+}
+
+@mixin margen($borde, $margenizq, $margender, $alinea){
+	border: $borde;
+	margin-left: $margenizq;
+	margin-right: $margender;
+	align-self: $alinea;
+	
+}
+img{
+	@include margen(5px,auto,auto,center)
+}
+
 .bGround {
 	background-image: url(../img/background.jpg);
 	background-color: $background-color_1;
 	background-repeat: no-repeat;
 	background-size: cover;
+}
+h1{
+	align-self: center;
 }
 a {
 	color: $color_1;
@@ -117,10 +144,9 @@ a {
 }
 /* grid tambien usado en otras paginas */
 .textNoti {
-	color: $color_2;
-	font-family: $font-family_1;
-	font-size: 2em;
-	text-align: center;
+	@extend .text;
+	margin-right: 40px;
+    margin-left: 40px; 
 }
 .textLink {
 	color: $color_5;

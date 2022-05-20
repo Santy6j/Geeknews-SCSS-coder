@@ -119,7 +119,7 @@
     text-justify: center;
     align-self: center;
     grid-column: 2; }
-  .text {
+  .text, .textNoti {
     color: antiquewhite;
     font-family: "Anybody", cursive;
     font-size: 2vw;
@@ -178,11 +178,29 @@
     color: antiquewhite;
     grid-column: 2; } }
 
+.titulocolor-tituloMain {
+  color: #0097fc; }
+
+.titulocolor-tituloNoti {
+  color: #01bd30; }
+
+.titulocolor-tituloAbout {
+  color: #f0f790; }
+
+img {
+  border: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  align-self: center; }
+
 .bGround {
   background-image: url(../img/background.jpg);
   background-color: #9b9595;
   background-repeat: no-repeat;
   background-size: cover; }
+
+h1 {
+  align-self: center; }
 
 a {
   color: inherit; }
@@ -275,7 +293,7 @@ a {
   text-justify: auto;
   text-align: center; }
 
-.text {
+.text, .textNoti {
   color: #fffdfa;
   font-family: "Anybody", cursive;
   word-break: break-all;
@@ -283,10 +301,8 @@ a {
 
 /* grid tambien usado en otras paginas */
 .textNoti {
-  color: antiquewhite;
-  font-family: "Anybody", cursive;
-  font-size: 2em;
-  text-align: center; }
+  margin-right: 40px;
+  margin-left: 40px; }
 
 .textLink {
   color: red;
