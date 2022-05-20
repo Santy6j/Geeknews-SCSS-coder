@@ -3,7 +3,13 @@ Fueron agregados keywords comunes a todas las paginas, el content varia de acuer
 Tambien fueron modificados los titulos de cada pagina para ser mas descriptivos
 
 Index
+
 Noticia
-About          } Todos tuvieorn los mismos cambios explicados anteriormente
+
+About
+
 Videos
+
 Foros
+
+Todos tuvieorn los mismos cambios explicados anteriormente
